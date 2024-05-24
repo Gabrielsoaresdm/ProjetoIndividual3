@@ -40,6 +40,7 @@ ax.text(0.90, 0.87, info_text, horizontalalignment='left', verticalalignment='to
 # Exibindo o gráfico
 plt.show()
 ```
+![image](https://github.com/Gabrielsoaresdm/Relatorio_progresso/assets/112710457/71ff310e-8737-419e-9d8e-0cf7b1d02dba)
 
 ## Execução do Projeto
 1. Clone este repositório: 
