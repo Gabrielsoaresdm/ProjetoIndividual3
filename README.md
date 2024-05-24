@@ -15,6 +15,31 @@ Este relatório tem o objetivo de demonstrar a importância da análise dos dado
 ### 2. Apresentação de Resultados
 - Descrições do passo a passo da análise em Markdown.
 - Apresentação dos dados e resultado em Matplotlib com insights gerados.
+- Exemplo de um gráfico gerado:
+  
+```
+#import da biblioteca matplotlib
+from matplotlib import pyplot as plt
+
+# Criando o gráfico de barras
+ax = base_relatorio.plot(kind='bar', title='Taxa de Produtividade diária', x='Dia', y='x')
+
+# Ocultando as bordas superior e direita do gráfico corretamente
+plt.gca().spines[['top', 'right',]].set_visible(False)
+
+# Removendo a legenda
+ax.legend().set_visible(False)
+
+# Adicionando rótulos de dados no topo das colunas
+for p in ax.patches:
+ax.annotate(str(p.get_height()), (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='bottom')
+# Adicionando o texto informativo diretamente ao objeto de eixo
+info_text = "Média total de " + str(tarefas_hora.round(1)) + " tarefas\nconcluídas por hora"
+ax.text(0.90, 0.87, info_text, horizontalalignment='left', verticalalignment='top', transform=ax.transAxes, bbox=dict(facecolor='white', alpha=0.7, boxstyle='round,pad=0.4'), fontsize=10) # Ajuste o valor de pad conforme necessário
+
+# Exibindo o gráfico
+plt.show()
+```
 
 ## Execução do Projeto
 1. Clone este repositório: 
@@ -30,4 +55,5 @@ Este relatório enfatiza a importância da análise contínua de dados ao longo 
 A análise de dados é essencial para entender o progresso do projeto, detectar padrões e tendências, e abordar quaisquer obstáculos rapidamente. Ao priorizar a análise de dados, os proprietários podem tomar decisões estratégicas, resultando em um produto final de alta qualidade e uma experiência satisfatória para todas as partes envolvidas.
 
 Este relatório destaca a importância de integrar a análise de dados como parte integral do processo de desenvolvimento de software, destacando seu valor para o sucesso do projeto.
+
 
