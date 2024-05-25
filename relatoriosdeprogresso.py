@@ -149,7 +149,7 @@ plt.show()
 tarefas_hora = total_tarefas/total_horas
 print("A produtividade diária da equipe é de: " + str(tarefas_hora.round(1)) + " tarefas por hora")
 
-base_relatorio['x'] = (base_relatorio['Tarefas Concluídas']/base_relatorio['Horas Trabalhadas']).round(1)
+x = (base_relatorio['Tarefas Concluídas']/base_relatorio['Horas Trabalhadas']).round(1)
 x
 
 #import da biblioteca matplotlib
